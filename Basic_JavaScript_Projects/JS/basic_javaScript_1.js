@@ -18,6 +18,7 @@ function myFirstFunction () {
     document.getElementById("green_text").innerHTML = result;
 }
 
+//learn a new function
 function secondFunction () {
     var str = "This is red text!";
     var result = str.fontcolor("red");
