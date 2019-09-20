@@ -74,3 +74,27 @@ function compare_triple_4() {
     y = "dogs";
     document.write(x===y);
 }
+
+function boo_1() {
+    document.write(5 > 2 && 10 > 4);
+}
+
+function boo_2() {
+    document.write(5 > 10 && 10 > 4);
+}
+
+function boo_3() {
+    document.write(5 > 10 || 10 > 4);
+}
+
+function boo_4() {
+    document.write(5 > 10|| 10 > 20);
+}
+
+function not_operator_1() {
+    document.getElementById("not_op_1").innerHTML = !(5>10);
+}
+
+function not_operator_2() {
+    document.getElementById("not_op_2").innerHTML = !(20>10);
+}
