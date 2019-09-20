@@ -34,3 +34,43 @@ function boolean_false() {
 }
 
 console.log(2+2);
+console.log(2>10);
+
+function coercion() {
+    var x = "10" + 5;
+    document.write(x);
+}
+
+function compare_true() {
+    var x = 10==10;
+    document.write(x);
+}
+
+function compare_false() {
+    var x = 10==20;
+    document.write(x);
+}
+
+function compare_triple_1() {
+    x = 82;
+    y = "82";
+    document.write(x===y);
+}
+
+function compare_triple_2() {
+    x = "people";
+    y = "people";
+    document.write(x===y);
+}
+
+function compare_triple_3() {
+    x = 82;
+    y = "10";
+    document.write(x===y);
+}
+
+function compare_triple_4() {
+    x = "people";
+    y = "dogs";
+    document.write(x===y);
+}
