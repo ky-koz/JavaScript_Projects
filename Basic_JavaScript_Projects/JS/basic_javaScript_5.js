@@ -22,3 +22,15 @@ function infinity_neg() {
     var x = -3E310;
     document.write(x);
 }
+
+function boolean_true() {
+    var x = 10 > 2;
+    document.write(x);
+}
+
+function boolean_false() {
+    var x = 5 > 20;
+    document.write(x);
+}
+
+console.log(2+2);
