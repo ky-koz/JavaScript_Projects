@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic JS/HTML 9</title>
+    <link rel="stylesheet" type="text/css" href="./css/basic_css_9.css">
+</head>
+<body>
+<!-- Timer -->
+    <p>How many seconds would you like to set your alarm for?</p>
+    <input id="seconds" value="" />
+    <button onclick="countdown()">Click here</button>
+    <p id="timer"></p>
+
+<!-- Start of Slideshow -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="./images/bkgd_1.jpg" style="width:100%">
+            <div class="text">Background One</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="./images/bkgd_2.jpg" style="width:100%">
+            <div class="text">Background Two</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="./images/bkgd_3.jpg" style="width:100%">
+            <div class="text">Background Three</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script src="./JS/basic_javaScript_9.js"></script>
+</body>
+</html>
