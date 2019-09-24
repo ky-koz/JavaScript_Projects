@@ -89,8 +89,9 @@ function continue_function() {
     var text = "";
     var i;
     for (i = 0; i < 10; i++) {
-        if (i === 7) { continue; }
+        if (i === 7) { continue; } //this line skips 7
         text += "Count " + i + "<br>";
     }
     document.getElementById("continue_state").innerHTML = text;
 }
+
