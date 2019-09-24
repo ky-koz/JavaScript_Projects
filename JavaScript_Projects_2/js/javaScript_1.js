@@ -45,3 +45,41 @@ function species_function() {
     }
     document.getElementById("output").innerHTML = species_output;
 }
+
+function hello_world_function() {
+    var a = document.getElementsByClassName("click");
+    a[0].innerHTML = "The text has changed!";
+}
+
+function canvas_draw() {
+    var c = document.getElementById("canvas_1");
+    var ctx = c.getContext("2d");
+
+    ctx.font = "5em Arial";
+    var grd = ctx.createLinearGradient(0, 0, 170, 0);
+    // Create gradient
+    var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+    gradient.addColorStop("0", "magenta");
+    gradient.addColorStop("0.5", "blue");
+    gradient.addColorStop("1.0", "red");
+    //Fill with gradient
+    ctx.fillStyle = gradient;
+    ctx.fillText("FILL TEXT", 47, 150);
+}
+
+canvas_draw();
+
+function canvas_draw_2() {
+    var c = document.getElementById("canvas_2");
+    var ctx = c.getContext("2d");
+    var grd = ctx.createLinearGradient(100, 100, 250, 0);
+    // Create gradient
+    grd.addColorStop("0", "blue");
+    grd.addColorStop("0.5", "magenta");
+    grd.addColorStop("1.0", "yellow");
+    //Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 0, 600, 300);
+}
+
+canvas_draw_2();
