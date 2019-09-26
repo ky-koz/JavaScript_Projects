@@ -540,7 +540,7 @@ function checkWinCon7(info,squareArray) {
         }
     }
     if (match6Avatar != undefined && match4Avatar != undefined && match2Avatar != undefined) {
-        if (match6Avatar == match4Avatar && match4Avatar == match2Avatar) {
+        if (match6Avatar == match4Avatar && match6Avatar == match2Avatar) {
             winDetected = "win";
         }
     }
