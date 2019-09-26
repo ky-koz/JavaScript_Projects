@@ -186,7 +186,7 @@ function avatarPlaced() {
     var parseText = document.getElementById('gameMsg').innerHTML;
     var showPlayer = document.getElementById('showPlayer'); // select the current element to memory
     //check if there is already a winner... if there is, then don't continue the game
-    if (parseText == "That's three in a row, Player 1 wins!" || ParseText == "That's three in a row, Player 2 wins!") {
+    if (parseText == "That's three in a row, Player 1 wins!" || parseText == "That's three in a row, Player 2 wins!") {
         showPlayer.innerHTML = "Game Stopped";
         showPlayer.style.color='red';
     }
@@ -339,7 +339,7 @@ function glowBoard(pos) {
 function squareSound() {
     var sound = document.getElementById("placeAvatar");
     sound.play();
-    setTimeout(function() {sound.onpause();}, 400); // add delay to these to keep sound short
+    setTimeout(function() {sound.pause();}, 400); // add delay to these to keep sound short
     setTimeout(function() {sound.currentTime = 0;}, 500);
 }
 function tieSound() {
@@ -456,8 +456,8 @@ function checkWinCon3(info,squareArray) {
 }
 
 // checking for wincon squares 036
-function checkWinCon3(info,squareArray) {
-    var winCon3 = [0,3,6];
+function checkWinCon4(info,squareArray) {
+    var winCon4 = [0,3,6];
     var winDetected = "on";
     for (var i in info) {
         if (info[i].charAt(0) == "0") {
