@@ -90,7 +90,7 @@ function stopEnabled(btn) {
 }
 
 //this function styles the game buttons while they are disabled
-function btnDisabled(btn) {
+function startEnabled(btn) {
     btn.style.color = "#fff";
     btn.style.border = "2px solid rgb(0, 153, 0)";
     btn.style.backgroundColor = "rgb(57, 230, 0)";
@@ -284,9 +284,9 @@ function winner(winDetected,winCon) {
 
 //this function will make the winning squares light up in celebration
 function glowBoard(pos) {
-    var index = pos[0];
-    var index = pos[1];
-    var index = pos[2];
+    var index0 = pos[0];
+    var index1 = pos[1];
+    var index2 = pos[2];
     var squares = document.getElementsByClassName('square')
     for (var i=0;i<squares.length;i++) {
         if (i == index0) {
@@ -540,7 +540,7 @@ function checkWinCon7(info,squareArray) {
         }
     }
     if (match6Avatar != undefined && match4Avatar != undefined && match2Avatar != undefined) {
-        if (matc63Avatar == match4Avatar && match4Avatar == match2Avatar) {
+        if (match6Avatar == match4Avatar && match4Avatar == match2Avatar) {
             winDetected = "win";
         }
     }
