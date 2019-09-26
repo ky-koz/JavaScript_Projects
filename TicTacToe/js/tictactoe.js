@@ -108,7 +108,6 @@ function stopGame() {
     showPlayer.innerHTML = "Game Stopped";
     showPlayer.style.color='red';   
 
-
     //reset all squares to their starting empty state.
     var arrayO = document.getElementsByClassName("O");
     var arrayX = document.getElementsByClassName("X");
@@ -318,7 +317,6 @@ function glowBoard(pos) {
             setTimeout(function() {bg2.style.backgroundColor = 'rgb(244, 238, 66)';}, 900);
             setTimeout(function() {bg2.style.backgroundColor = 'rgb(244, 179, 66)';}, 1000);
             setTimeout(function() {bg2.style.backgroundColor = '#d7f3f7';}, 1100);
-        }
         } else if (i == index2) {
             var bg3 = squares[i];
             setTimeout(function() {bg3.style.backgroundColor = 'rgb(244, 179, 66)';}, 100);
@@ -364,17 +362,17 @@ function diceRoll() {
 // flash for a few seconds for a win animation
 function blink() {
     var body = document.getElementById('body');
-    setTimeout(function() {body.style.backgroundCOlor = '#94f7ed';}, 100);
-    setTimeout(function() {body.style.backgroundCOlor = '#94cef7';}, 200);
-    setTimeout(function() {body.style.backgroundCOlor = '#94a6f7';}, 300);
-    setTimeout(function() {body.style.backgroundCOlor = '#b094f7';}, 400);
-    setTimeout(function() {body.style.backgroundCOlor = '#cc94f7';}, 500);
-    setTimeout(function() {body.style.backgroundCOlor = '#e894f7';}, 600);
-    setTimeout(function() {body.style.backgroundCOlor = '#f794d9';}, 700);
-    setTimeout(function() {body.style.backgroundCOlor = '#f73881';}, 800);
-    setTimeout(function() {body.style.backgroundCOlor = '#c6034e';}, 900);
-    setTimeout(function() {body.style.backgroundCOlor = '#e00202';}, 1000);
-    setTimeout(function() {body.style.backgroundCOlor = '#ffffff';}, 1100);
+    setTimeout(function() {body.style.backgroundColor = '#94f7ed';}, 100);
+    setTimeout(function() {body.style.backgroundColor = '#94cef7';}, 200);
+    setTimeout(function() {body.style.backgroundColor = '#94a6f7';}, 300);
+    setTimeout(function() {body.style.backgroundColor = '#b094f7';}, 400);
+    setTimeout(function() {body.style.backgroundColor = '#cc94f7';}, 500);
+    setTimeout(function() {body.style.backgroundColor = '#e894f7';}, 600);
+    setTimeout(function() {body.style.backgroundColor = '#f794d9';}, 700);
+    setTimeout(function() {body.style.backgroundColor = '#f73881';}, 800);
+    setTimeout(function() {body.style.backgroundColor = '#c6034e';}, 900);
+    setTimeout(function() {body.style.backgroundColor = '#e00202';}, 1000);
+    setTimeout(function() {body.style.backgroundColor = '#ffffff';}, 1100);
 }
 
 // -------------------------------------------------------------------
@@ -412,186 +410,165 @@ function checkWinCon1(info,squareArray) {
 }
 
 // checking for wincon squares 345
-function checkWinCon1(info,squareArray) {
+function checkWinCon2(info,squareArray) {
+    var winCon2 = [3,4,5];
     var winDetected = "on";
-    var winCon1 = [3,4,5];
-
     for (var i in info) {
         if (info[i].charAt(0) == "3") {
-            var match0Avatar = info[i].charAt(1); // only interested in recording the avatar
+            var match3Avatar = info[i].charAt(1); // only interested in recording the avatar
         }
         if (info[i].charAt(0) == "4") {
-            var match1Avatar = info[i].charAt(1);
+            var match4Avatar = info[i].charAt(1);
         }
         if (info[i].charAt(0) == "5") {
-            var match2Avatar = info[i].charAt(1);
+            var match5Avatar = info[i].charAt(1);
         }
     }
-    // this will trigger (ONLY) if there was a match for index), index1, and index2
-    if (match0Avatar != undefined && match1Avatar != undefined && match2Avatar != undefined) {
-        if (match0Avatar == match1Avatar && match0Avatar == match2Avatar) {
-            winDetected = "win"; // this flag will pass when a win has been detected
-            winner(winDetected,winCon1);
-            return;
+    if (match3Avatar != undefined && match4Avatar != undefined && match5Avatar != undefined) {
+        if (match3Avatar == match4Avatar && match3Avatar == match5Avatar) {
+            winDetected = "win";
         }
     }
-    winner(winDetected,winCon1); // winCon1 is the array of win combo
+    winner(winDetected,winCon2);
 }
+
 // checking for wincon squares 678
-function checkWinCon1(info,squareArray) {
+function checkWinCon3(info,squareArray) {
+    var winCon3 = [6,7,8];
     var winDetected = "on";
-    var winCon1 = [6,7,8];
     for (var i in info) {
         if (info[i].charAt(0) == "6") {
-            var match0Avatar = info[i].charAt(1); // only interested in recording the avatar
+            var match6Avatar = info[i].charAt(1); // only interested in recording the avatar
         }
         if (info[i].charAt(0) == "7") {
-            var match1Avatar = info[i].charAt(1);
+            var match7Avatar = info[i].charAt(1);
         }
         if (info[i].charAt(0) == "8") {
-            var match2Avatar = info[i].charAt(1);
+            var match8Avatar = info[i].charAt(1);
         }
     }
-    // this will trigger (ONLY) if there was a match for index), index1, and index2
-    if (match0Avatar != undefined && match1Avatar != undefined && match2Avatar != undefined) {
-        if (match0Avatar == match1Avatar && match0Avatar == match2Avatar) {
-            winDetected = "win"; // this flag will pass when a win has been detected
-            winner(winDetected,winCon1);
-            return;
+    if (match6Avatar != undefined && match7Avatar != undefined && match8Avatar != undefined) {
+        if (match6Avatar == match7Avatar && match6Avatar == match8Avatar) {
+            winDetected = "win";
         }
     }
-    winner(winDetected,winCon1); // winCon1 is the array of win combo
+    winner(winDetected,winCon3);
 }
-// checking for wincon squares 036
-function checkWinCon1(info,squareArray) {
-    var winDetected = "on";
-    var winCon1 = [0,3,6];
 
+// checking for wincon squares 036
+function checkWinCon3(info,squareArray) {
+    var winCon3 = [0,3,6];
+    var winDetected = "on";
     for (var i in info) {
         if (info[i].charAt(0) == "0") {
             var match0Avatar = info[i].charAt(1); // only interested in recording the avatar
         }
         if (info[i].charAt(0) == "3") {
-            var match1Avatar = info[i].charAt(1);
+            var match3Avatar = info[i].charAt(1);
         }
         if (info[i].charAt(0) == "6") {
-            var match2Avatar = info[i].charAt(1);
+            var match6Avatar = info[i].charAt(1);
         }
     }
-    // this will trigger (ONLY) if there was a match for index), index1, and index2
-    if (match0Avatar != undefined && match1Avatar != undefined && match2Avatar != undefined) {
-        if (match0Avatar == match1Avatar && match0Avatar == match2Avatar) {
-            winDetected = "win"; // this flag will pass when a win has been detected
-            winner(winDetected,winCon1);
-            return;
+    if (match0Avatar != undefined && match3Avatar != undefined && match6Avatar != undefined) {
+        if (match0Avatar == match3Avatar && match0Avatar == match6Avatar) {
+            winDetected = "win";
         }
     }
-    winner(winDetected,winCon1); // winCon1 is the array of win combo
+    winner(winDetected,winCon4);
 }
-// checking for wincon squares 147
-function checkWinCon1(info,squareArray) {
-    var winDetected = "on";
-    var winCon1 = [1,4,7];
 
+// checking for wincon squares 147
+function checkWinCon5(info,squareArray) {
+    var winCon5 = [1,4,7];
+    var winDetected = "on";
     for (var i in info) {
         if (info[i].charAt(0) == "1") {
-            var match0Avatar = info[i].charAt(1); // only interested in recording the avatar
+            var match1Avatar = info[i].charAt(1); // only interested in recording the avatar
         }
         if (info[i].charAt(0) == "4") {
-            var match1Avatar = info[i].charAt(1);
+            var match4Avatar = info[i].charAt(1);
         }
         if (info[i].charAt(0) == "7") {
-            var match2Avatar = info[i].charAt(1);
+            var match7Avatar = info[i].charAt(1);
         }
     }
-    // this will trigger (ONLY) if there was a match for index), index1, and index2
-    if (match0Avatar != undefined && match1Avatar != undefined && match2Avatar != undefined) {
-        if (match0Avatar == match1Avatar && match0Avatar == match2Avatar) {
-            winDetected = "win"; // this flag will pass when a win has been detected
-            winner(winDetected,winCon1);
-            return;
+    if (match1Avatar != undefined && match4Avatar != undefined && match7Avatar != undefined) {
+        if (match1Avatar == match4Avatar && match1Avatar == match7Avatar) {
+            winDetected = "win";
         }
     }
-    winner(winDetected,winCon1); // winCon1 is the array of win combo
+    winner(winDetected,winCon5);
 }
+
 // checking for wincon squares 258
-function checkWinCon1(info,squareArray) {
+function checkWinCon6(info,squareArray) {
+    var winCon6 = [2,5,8];
     var winDetected = "on";
-    var winCon1 = [2,5,8];
     for (var i in info) {
         if (info[i].charAt(0) == "2") {
-            var match0Avatar = info[i].charAt(1); // only interested in recording the avatar
+            var match2Avatar = info[i].charAt(1); // only interested in recording the avatar
         }
         if (info[i].charAt(0) == "5") {
-            var match1Avatar = info[i].charAt(1);
+            var match5Avatar = info[i].charAt(1);
         }
         if (info[i].charAt(0) == "8") {
+            var match8Avatar = info[i].charAt(1);
+        }
+    }
+    if (match2Avatar != undefined && match5Avatar != undefined && match8Avatar != undefined) {
+        if (match2Avatar == match5Avatar && match2Avatar == match8Avatar) {
+            winDetected = "win";
+        }
+    }
+    winner(winDetected,winCon6);
+}
+
+// checking for wincon squares 642
+function checkWinCon7(info,squareArray) {
+    var winCon7 = [6,4,2];
+    var winDetected = "on";
+    for (var i in info) {
+        if (info[i].charAt(0) == "6") {
+            var match6Avatar = info[i].charAt(1); // only interested in recording the avatar
+        }
+        if (info[i].charAt(0) == "4") {
+            var match4Avatar = info[i].charAt(1);
+        }
+        if (info[i].charAt(0) == "2") {
             var match2Avatar = info[i].charAt(1);
         }
     }
-    // this will trigger (ONLY) if there was a match for index), index1, and index2
-    if (match0Avatar != undefined && match1Avatar != undefined && match2Avatar != undefined) {
-        if (match0Avatar == match1Avatar && match0Avatar == match2Avatar) {
-            winDetected = "win"; // this flag will pass when a win has been detected
-            winner(winDetected,winCon1);
-            return;
+    if (match6Avatar != undefined && match4Avatar != undefined && match2Avatar != undefined) {
+        if (matc63Avatar == match4Avatar && match4Avatar == match2Avatar) {
+            winDetected = "win";
         }
     }
-    winner(winDetected,winCon1); // winCon1 is the array of win combo
+    winner(winDetected,winCon7);
 }
+
 // checking for wincon squares 048
-function checkWinCon1(info,squareArray) {
+function checkWinCon8(info,squareArray) {
+    var winCon8 = [0,4,8];
     var winDetected = "on";
-    var winCon1 = [0,4,8];
     for (var i in info) {
         if (info[i].charAt(0) == "0") {
             var match0Avatar = info[i].charAt(1); // only interested in recording the avatar
         }
         if (info[i].charAt(0) == "4") {
-            var match1Avatar = info[i].charAt(1);
+            var match4Avatar = info[i].charAt(1);
         }
         if (info[i].charAt(0) == "8") {
-            var match2Avatar = info[i].charAt(1);
+            var match8Avatar = info[i].charAt(1);
         }
     }
-    // this will trigger (ONLY) if there was a match for index), index1, and index2
-    if (match0Avatar != undefined && match1Avatar != undefined && match2Avatar != undefined) {
-        if (match0Avatar == match1Avatar && match0Avatar == match2Avatar) {
-            winDetected = "win"; // this flag will pass when a win has been detected
-            winner(winDetected,winCon1);
-            return;
+    if (match0Avatar != undefined && match4Avatar != undefined && match8Avatar != undefined) {
+        if (match0Avatar == match4Avatar && match0Avatar == match8Avatar) {
+            winDetected = "win";
         }
     }
-    winner(winDetected,winCon1); // winCon1 is the array of win combo
+    winner(winDetected,winCon8);
 }
-
-// checking for wincon squares 246
-function checkWinCon1(info,squareArray) {
-    var winDetected = "on";
-    var winCon1 = [2,4,6];
-    for (var i in info) {
-        if (info[i].charAt(0) == "2") {
-            var match0Avatar = info[i].charAt(1); // only interested in recording the avatar
-        }
-        if (info[i].charAt(0) == "4") {
-            var match1Avatar = info[i].charAt(1);
-        }
-        if (info[i].charAt(0) == "6") {
-            var match2Avatar = info[i].charAt(1);
-        }
-    }
-    // this will trigger (ONLY) if there was a match for index), index1, and index2
-    if (match0Avatar != undefined && match1Avatar != undefined && match2Avatar != undefined) {
-        if (match0Avatar == match1Avatar && match0Avatar == match2Avatar) {
-            winDetected = "win"; // this flag will pass when a win has been detected
-            winner(winDetected,winCon1);
-            return;
-        }
-    }
-    winner(winDetected,winCon1); // winCon1 is the array of win combo
-}
-
-
 
 //------------------------------------------------------------------------------------------------------
 // These block of functions are for each click event of their corresponding square element
@@ -806,10 +783,10 @@ function square9Animate() {
 
 // this function will perform the animation for the O avatar.
 function animateO(selected) {
-    selected.style.transform = (selected.style.transform == "translateY(-100%)" || null) ? "translateY(0%)" : "translateY(-100%)";
+    selected.style.transform = (selected.style.transform == "translateY(0%)" || null) ? "translateY(0%)" : "translateY(0%)";
 }
 
 // this function will perform the animation for the X avatar.
 function animateX(selected) {
-    selected.style.transform = (selected.style.transform == "translateY(100%)" || null) ? "translateY(0%)" : "translateY(100%)";
+    selected.style.transform = (selected.style.transform == "translateY(-100%)" || null) ? "translateY(0%)" : "translateY(-100%)";
 }
