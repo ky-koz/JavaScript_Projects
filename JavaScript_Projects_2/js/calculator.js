@@ -69,10 +69,10 @@ function update_display() {
 }
 
 update_display () ;
-    const keys = document.querySelector('calculator-keys');
+    const keys = document.querySelector('.calculator-keys');
     keys.addEventListener('click', (event) => { // the second ")" wasn't included...
         const { target } = event;
-        if (!target.matched('button')) {
+        if (!target.matches('button')) {
             return;
         }
        
