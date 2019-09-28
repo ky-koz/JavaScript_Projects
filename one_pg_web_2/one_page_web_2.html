@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>One Page Web #2</title>
+    <link rel="stylesheet" href="./css/one_page_web_2.css"/>
+</head>
+<body>
+    <!-- Lightbox -->
+    <div class="row1"></div>
+        <div class="column1">
+            <img src="./images/thumb_1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column1">
+            <img src="./images/thumb_13.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        </div>
+        <div class="column1">
+            <img src="./images/thumb_15.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        </div>
+        <div class="column1">
+            <img src="./images/thumb_8.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>			
+    </div>
+
+    <div id="artModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="artSlides">
+                <div class="numberText">1 / 4</div>
+                <img src="./images/thumb_1.jpg" style="width: 100%">
+            </div>
+            
+            <div class="artSlides">
+                <div class="numberText">2 / 4</div>
+                <img src="./images/thumb_13.jpg" style="width: 100%">
+            </div>
+            
+            <div class="artSlides">
+                <div class="numberText">3 / 4</div>
+                <img src="./images/thumb_15.jpg" style="width: 100%">
+            </div>
+            
+            <div class="artSlides">
+                <div class="numberText">4 / 4</div>
+                <img src="./images/thumb_8.jpg" style="width: 100%">
+            </div>
+
+            <div class="column1">
+                <img class="demo cursor" src="./images/thumb_1.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
+            </div>
+            <div class="column1">
+                <img class="demo cursor" src="./images/thumb_13.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+            </div>
+            <div class="column1">
+                <img class="demo cursor" src="./images/thumb_15.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
+            </div>
+            <div class="column1">
+                <img class="demo cursor" src="./images/thumb_8.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="./js/one_page_web_2.js"></script>
+</body>
+</html>
