@@ -1,5 +1,5 @@
 function openModal() {
-    document.getElementById("artModal").style.disply = "block";
+    document.getElementById("artModal").style.display = "block";
 }
 
 function closeModal() {
