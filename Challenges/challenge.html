@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="headId">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Challenge</title>
+</head>
+<body>
+    <h2> the HTML DOM Document Object</h2>
+    <p>Click to see the id of the head element in the document</p>
+    <button onclick="head_function()">Click here</button>
+    <p id="head_dom"></p>
+
+    <script>
+        function head_function() {
+            var x = document.head.id;
+            document.getElementById("head_dom").innerHTML = x;
+        }
+    </script>
+</body>
+</html>
