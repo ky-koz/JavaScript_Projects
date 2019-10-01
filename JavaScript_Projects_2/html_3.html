@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML JS 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <style>
+    body {
+        opacity: 1;
+        transition: 2s opacity;
+    }
+
+    body.fade-out {
+        opacity: 0;
+        transition: none;
+    }
+    
+    </style>
 </head>
 <body>
-    <h1>Flowers</h1>
+    <h1 style="font-size:8vw;">Flowers</h1>
     <h3>Click on a state to learn its state flower!</h3>
 
     <ul>
@@ -17,6 +30,11 @@
         <li onclick="display_type(this)" id="Louisiana" data-flower-type="Magnolia">Louisiana</li>
     </ul>
 
+    <script>
+    $(function() {
+        $('body').removeClass('fade-out');
+    });
+    </script>
     <script src="./js/javaScript_3.js"></script>
 </body>
 </html>

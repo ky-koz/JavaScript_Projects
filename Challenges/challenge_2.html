@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Challenge 2</title>
+    <link rel="stylesheet" href="./css/challenge_2.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <h2 id="title">Popup Form</h2>
+    <p>Click on the button at the bottom of this page to open the login form.</p>
+    <p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
+    <div class="sticky">
+        <button type="button"><a href="#title">Top</a></button>
+        <button type="button"> <a href="#bottom">Bottom</a></button>
+    </div>
+    <div class="bar"></div>
+    <div id="top">
+        <img class="img zoom" href="./images/leo-on-back.jpg" src="./images/leo-on-back.jpg" alt="" width="50%">
+    </div>
+    <div id="middle"></div>
+    <div id="bottom">
+            <div id="slideshow">
+                    <div>
+                        <img src="./images/antler-light-tangle.jpg" width="100%">
+                    </div>
+                    <div>
+                        <img src="./images/flower-linear-light.jpg" height="100%">
+                    </div>
+                    <div>
+                        <img src="./images/up-close-bulb.jpg"height="100%">    
+                    </div>
+                 </div>
+    </div>
+
+
+
+    <button class="open-button" onclick="openForm()">Open Form</button>
+
+    <div class="form-popup" id="myForm">
+    <form action="" class="form-container">
+        <h1>Login</h1>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+    </div>
+<script src="./js/challenge_2.js"></script>
+</body>
+</html>
