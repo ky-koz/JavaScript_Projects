@@ -11,13 +11,13 @@
     </script>
 </head>
 <body>
-    
+    <div id="like_button_container"></div>
     <script>
         const x = React.createElement;
         class likeButton extends React.Component {
             constructor(props) {
                 super(props);
-                this.state = { liked: false};
+                this.state = { liked: false };
             }
 
             render() {
@@ -25,16 +25,16 @@
                     return 'You clicked the like button!';
                 }
 
-                return X(
+                return x(
                     'button',
-                    { onClick: () => this.setState({ like: true}) },
+                    { onClick: () => this.setState({ like: true }) },
                     'Like'
                 );
             }
         }
 
         const domContainer = document.querySelector('#like_button_container');
-        ReactDOM.render(X(likeButton), domContainer);
+        ReactDOM.render(x(likeButton), domContainer);
     </script>
 
 </body>
